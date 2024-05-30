@@ -63,29 +63,28 @@ promiseFour
 
 const promiseFive = new Promise((resolve, reject) => {
     setTimeout(function(){
-        let error = true;
+        let error = false;
         if (!error){
             resolve({username: 'Sandip', password: 'skibidiohio'});
         } else {
-            console.log('Error: Something went wrong at promiseFive!')      
+            reject('Error: Something went wrong at promiseFive!')      
         }
     }, 100)
 })
 
 async function consumePromise5(){
     try{
-        const res = await promiseFive
-    } catch(error){
+        const res = await promiseFive;
         console.log(res)
+    } catch(error){
+        console.log(error)
     }
 }
 
 consumePromise5();
 
 
-
 // JSON request
-
 async function getAllUsers(){
     try{
         const response = await fetch('https://jsonplaceholder.typicode.com/users')
