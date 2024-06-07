@@ -6,6 +6,5 @@ console.log(foundNumber);
 const allFoundNumbers = numbers.filter(num => num > 30);
 console.log(allFoundNumbers)
 
-
-
-
+const squaredNumbers = numbers.map(num => num / 5)
+console.log(squaredNumbers)

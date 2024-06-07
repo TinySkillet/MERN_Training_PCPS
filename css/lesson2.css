@@ -1,0 +1,40 @@
+/* Descendant Selector */
+
+.main-div h1{
+    background-color: orange;
+    color: white;
+}
+
+/* Child Selector */
+
+.main-div > h1{
+    height: 500px;
+    background-image: url('../images/gta-6-3840x2160-fan-art-4k-24946.jpeg');
+    background-size: contain;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-div2 {
+    background-image: url('../images/gta-6-3840x2160-fan-art-4k-24946.jpeg');
+    background-attachment: fixed;
+    width: auto;
+    background-size: cover;
+}
+
+/* read about object fit property */
+
+/* Adjacent Sibling Selector */
+
+h1 + h2 {
+    background-color: orange;
+    color: white;
+}
+
+/* General Sibling Selector */
+
+h1 ~ h2 {
+    background-color: orange;
+    color: white;
+}   

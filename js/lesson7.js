@@ -40,5 +40,6 @@ find: finds the first element in the array that satisfies the provided testing f
 It returns the value of the first element found, or 'undefined' if no element
 satisfies the condition 
 
+            resolve('Promise resolved'), 1000ZZZ
 filter: finds all the element in the array that satisfies the provided testing function.
 */
