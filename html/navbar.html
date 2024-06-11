@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+
+        * {
+            margin: 0;
+        }
+        nav {
+            background: linear-gradient(0deg, rgba(180, 242, 246, 0.7), rgb(76, 195, 222));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        a {
+            color: white;
+            font-weight: 500;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.6rem;
+            text-decoration: none;
+            margin-right: 3rem;
+        }
+        button{
+            padding: .6rem;
+            color: white;
+            background: rgb(97, 172, 162);
+            border-radius: .7rem;
+            border: none;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        nav div.right, nav div.left{
+            margin-right: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <img src="../images/logo.svg" alt="">
+        </div>
+        <div class="mid">
+            <a href="">Home</a>
+            <a href="">Menu</a>
+            <a href="">Services</a>
+            <a href="">About Us</a>
+            <a href="">Contact Us</a>
+        </div>
+        <div class="right">
+            <button>Log In</button>
+            <button>Log Out</button>
+        </div>
+    </nav>
+</body>
+</html>
