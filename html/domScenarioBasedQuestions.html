@@ -83,12 +83,12 @@
           document.getElementById("book_name").value = "";
           
         } else {
-          alert("Please enter a valid book title!");
+          prompt("Please enter a valid book title!");
         }
       }
 
       function searchBook() {
-        let book_title = document.getElementById("book_name").value;
+        let book_title = prompt("Enter book name: ");
 
         if (book_title == "") {
           alert("Please enter a valid book title!");
