@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/responsiveNavbar.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Responsive Navbar</title>
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <div class="branding">
+          <i class="ri-bluesky-fill"></i>
+          <span>Log's UI</span>
+        </div>
+        <div class="links">
+          <a class="hideOnMobile" href="#">Home</a>
+          <a class="hideOnMobile" href="#">Templates</a>
+          <a class="hideOnMobile" href="#">Pages</a>
+          <a class="hideOnMobile" href="#">Elements</a>
+        </div>
+      </div>
+      <div class="sidebar">
+        <a href="#" onclick=hideSideBar()><i class="ri-close-large-fill"></i></a>
+        <a href="">Home</a>
+        <a href="">Templates</a>
+        <a href="">Pages</a>
+        <a href="">Elements</a>
+        <a href="">Buy Now</a>
+        <a href="">Discover</a>
+      </div>
+      <div class="right">
+        <button class="btn btn-primary hideOnMobile">Buy Now</button>
+        <button class="btn btn-secondary hideOnMobile">Discover</button>
+        <a class="hideOnLarge" href="#" onclick=showSideBar()><i class="ri-menu-line"></i></a>
+      </div>
+    </nav>
+        <div class="form-container">
+        <h2>START FOR FREE</h2>
+        <h1>Create new account.</h1>
+        <p>Already A Member? <a href="#"><u>Log In</u></a></p>
+        <form>  
+            <div class="input-group">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" placeholder="Michal">
+            </div>
+            <div class="input-group">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" placeholder="Masiak">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="michal.masiak@anywhere.co">
+                
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••">
+            </div>
+            <div class="form-buttons">
+                <button type="button" class="btn secondary">Change method</button>
+                <button type="submit" class="btn primary">Create account</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        function showSideBar(){
+            let sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSideBar(){
+            let sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
+  </body>
+</html>

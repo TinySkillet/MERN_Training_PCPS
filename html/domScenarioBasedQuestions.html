@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/responsiveNavbar.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Responsive Navbar</title>
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <div class="branding">
+          <i class="ri-bluesky-fill"></i>
+          <span>The Book Haven</span>
+        </div>
+        <div class="links">
+          <a class="hideOnMobile" href="#">Home</a>
+          <a class="hideOnMobile" href="#">Templates</a>
+          <a class="hideOnMobile" href="#">Pages</a>
+          <a class="hideOnMobile" href="#">Elements</a>
+        </div>
+      </div>
+      <div class="sidebar">
+        <a href="#" onclick="hideSideBar()"
+          ><i class="ri-close-large-fill"></i
+        ></a>
+        <a href="">Home</a>
+        <a href="">Templates</a>
+        <a href="">Pages</a>
+        <a href="">Elements</a>
+        <a href="">Buy Now</a>
+        <a href="">Discover</a>
+      </div>
+      <div class="right">
+        <button class="btn btn-primary hideOnMobile">Buy Now</button>
+        <button class="btn btn-secondary hideOnMobile">Discover</button>
+        <a class="hideOnLarge" href="#" onclick="showSideBar()"
+          ><i class="ri-menu-line"></i
+        ></a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="books">
+        <h1>My Books</h1>
+        <div class="book">
+          <ul id="book-list">
+            <li>Harry Potter and the Philosopher's Stone</li>
+            <li>The Alchemist</li>
+          </ul>
+        </div>
+      </div>
+      <div class="actions">
+        <h1>Actions</h1>
+        <button class="btn btn-secondary" id="add">Add</button>
+        <button class="btn btn-secondary" id="remove">Remove</button>
+        <button class="btn btn-secondary" id="search">Search</button>
+        <button class="btn btn-secondary" id="clear">Clear</button>
+      </div>
+      <div id="bookAdd">
+        <h1>New Book</h1>
+        <form action="">
+          <div class="input-group">
+            <label for="book_name">Book Name</label>
+            <input type="text" id="book_name" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function addBook() {
+        let book_title = document.getElementById("book_name").value;
+
+        if (book_title != "") {
+          let new_book = document.createElement("li");
+          let ul_element = document.getElementById("book-list");
+
+          new_book.textContent = book_title;
+          ul_element.appendChild(new_book);
+          document.getElementById("book_name").value = "";
+          
+        } else {
+          alert("Please enter a valid book title!");
+        }
+      }
+
+      function searchBook() {
+        let book_title = document.getElementById("book_name").value;
+
+        if (book_title == "") {
+          alert("Please enter a valid book title!");
+        } else {
+          let book_list = document.getElementById("book-list").children;
+
+          for (c of book_list) {
+            c.classList.remove("match");
+          }
+
+          for (c of book_list) {
+            if (c.textContent.toLowerCase() == book_title.toLowerCase()) {
+              c.classList.add("match");
+            }
+          }
+        }
+      }
+
+      function removeBook() {
+        let book_list = document.getElementById("book-list");
+        last_ele = book_list.querySelector("li:last-child");
+
+        if (last_ele != "") {
+          let y = confirm("Are you sure you want to delete that last book?");
+          if (y) {
+            book_list.removeChild(last_ele);
+          }
+        } else {
+          alert("No books to delete!");
+        }
+      }
+
+      function toggleFavorite(event){
+        if(event.target.tagName === 'LI'){
+          event.target.classList.toggle('favorite');
+        }
+      }
+
+      function clear(){
+        let book_list = document.getElementById('book-list').children;
+
+        for (book of book_list){
+          book.classList.remove('favorite');
+          book.classList.remove('match');
+        }
+      }
+
+      let book_list = document.getElementById('book-list');
+      book_list.addEventListener('click', toggleFavorite);
+
+      let add_btn = document.getElementById("add");
+      add_btn.addEventListener("click", addBook);
+
+      let remove_btn = document.getElementById("remove");
+      remove_btn.addEventListener("click", removeBook);
+
+      let search_btn = document.getElementById("search");
+      search_btn.addEventListener("click", searchBook);
+
+      let clear_btn = document.getElementById('clear');
+      clear_btn.addEventListener('click', clear);
+
+    </script>
+  </body>
+</html>
