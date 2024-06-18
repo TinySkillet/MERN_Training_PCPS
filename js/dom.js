@@ -28,7 +28,7 @@ if (element.hasAttribute){
     console.log('Attribute exists')
 }
 else {  
-    console.log('Attribute doesn not exist')
+    console.log('Attribute does not exist')
 }
 
 let button = document.getElementById('btn');

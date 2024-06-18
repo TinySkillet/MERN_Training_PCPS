@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+
+      body, div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .grandparent {
+        background: red;
+        height: 400px;
+        width: 400px;
+      }
+
+      .parent {
+        background: blue;
+        height: 280px;
+        width: 280px;
+      }
+
+      .child {
+        background: green;
+        height: 180px;
+        width: 180px;
+      }
+    </style>
+    <title>Event Listeners</title>
+  </head>
+  <body>
+    <div class="grandparent">
+      <div class="parent">
+        <div class="child"></div>
+      </div>
+    </div>
+    <script src="../js/eventListeners.js"></script>
+    <script src="../js/eventDelegate.js"></script>
+  </body>
+</html>
