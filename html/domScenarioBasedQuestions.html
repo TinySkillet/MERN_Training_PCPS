@@ -81,7 +81,6 @@
           new_book.textContent = book_title;
           ul_element.appendChild(new_book);
           document.getElementById("book_name").value = "";
-          
         } else {
           prompt("Please enter a valid book title!");
         }
@@ -121,23 +120,23 @@
         }
       }
 
-      function toggleFavorite(event){
-        if(event.target.tagName === 'LI'){
-          event.target.classList.toggle('favorite');
+      function toggleFavorite(event) {
+        if (event.target.tagName === "LI") {
+          event.target.classList.toggle("favorite");
         }
       }
 
-      function clear(){
-        let book_list = document.getElementById('book-list').children;
+      function clear() {
+        let book_list = document.getElementById("book-list").children;
 
-        for (book of book_list){
-          book.classList.remove('favorite');
-          book.classList.remove('match');
+        for (book of book_list) {
+          book.classList.remove("favorite");
+          book.classList.remove("match");
         }
       }
 
-      let book_list = document.getElementById('book-list');
-      book_list.addEventListener('click', toggleFavorite);
+      let book_list = document.getElementById("book-list");
+      book_list.addEventListener("click", toggleFavorite);
 
       let add_btn = document.getElementById("add");
       add_btn.addEventListener("click", addBook);
@@ -148,9 +147,17 @@
       let search_btn = document.getElementById("search");
       search_btn.addEventListener("click", searchBook);
 
-      let clear_btn = document.getElementById('clear');
-      clear_btn.addEventListener('click', clear);
+      let clear_btn = document.getElementById("clear");
+      clear_btn.addEventListener("click", clear);
 
+      function showSideBar() {
+        let sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSideBar() {
+        let sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
     </script>
   </body>
 </html>

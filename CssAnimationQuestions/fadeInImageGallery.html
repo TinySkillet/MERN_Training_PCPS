@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem;
+        }
+
+        .flex-container .img-container img {
+            height: 200px;
+            width: 150px;
+            object-fit: cover;
+        }
+
+        @keyframes fadeLeftToRight {
+            from {
+                transform: translateX(-200px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+        }
+
+        .fadeLeftToRight {
+            animation-name: fadeLeftToRight;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: both;
+            animation-delay: 1s;
+        }
+
+    </style>
+    <title>Image Gallery</title>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="img-container fadeLeftToRight">
+            <img src="../images/person1.jpg" alt="">
+        </div>
+        <div class="img-container fadeLeftToRight">
+            <img src="../images/person2.jpg" alt="">
+        </div>
+        <div class="img-container fadeLeftToRight">
+            <img src="../images/person3.jpg" alt="">
+        </div>
+        <div class="img-container fadeLeftToRight">
+            <img src="../images/person4.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

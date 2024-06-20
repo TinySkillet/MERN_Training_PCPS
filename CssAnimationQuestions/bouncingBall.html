@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .line {
+        margin: 0;
+      }
+
+      .circle {
+        margin: auto;
+        margin-top: 5rem;
+        margin-bottom: 0rem;
+        height: 100px;
+        transform: translateY(8px);
+        width: 100px;
+        background: red;
+        border-radius: 50%;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translate(-150px, -100px);
+        }
+
+        10% {
+            transform: translate(-70px, -60px)
+        }
+
+        20% {
+          transform: translate(0px, 0px);
+        }
+
+        30% {
+            transform: translate(70px, -60px);
+        }
+
+        40% {
+          transform: translate(150px, -100px);
+        }
+
+        50% {
+            transform: translate(220px, -60px);
+        }
+
+        60% {
+            transform: translate(300px, 0px);
+        }
+
+        70% {
+            transform: translate(370px, -60px);
+        }
+
+        80% {
+            transform: translate(450px, -100px)
+        }
+
+        90% {
+            transform: translate(520px, -60px);
+        }
+        100% {
+          transform: translate(600px, 0px);
+        }
+      }
+
+      .animate {
+        animation-duration: 1.5s;
+        animation-fill-mode: both;
+      }
+
+      .bounce {
+        animation-name: bounce;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+      }
+    </style>
+    <title>Bouncing Ball</title>
+  </head>
+  <body>
+    <div class="circle animate bounce"></div>
+    <div class="line">
+      <hr />
+    </div>
+  </body>
+</html>

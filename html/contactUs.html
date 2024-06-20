@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contactUs.css">
+    <title>Contact Us</title>
+</head>
+<body>
+   <div class="container">
+    <div class="top">
+        <h1>Contact our sales team</h1>
+        <p>Our team is happy to answer your sales questions. Fill out the form
+            and we'll be in touch as soon as possible
+        </p>
+    </div>
+    <div class="form">
+        <form action="#" onsubmit="submitForm(event)">
+            <div class="entry">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name">
+            </div>
+            <div class="entry">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name">
+            </div>
+            <div class="entry">
+                <label for="work-email">Work email</label>
+                <input type="email" id="work-email">
+            </div>
+            <div class="entry">
+                <label for="company-website">Company Website</label>
+                <input type="url" id="company-website">
+            </div>            
+            <div class="entry">
+                <label for="country">Country</label>
+                <input type="text" id="country">
+            </div>
+            <div class="entry">
+                <label for="payment-volume">Payments volume</label>
+                <input type="text" id="payment-volume">
+            </div>
+            <div class="entry">
+                <label for="anything-else">Anything else?</label>
+                <input type="text" id="anything-else">
+            </div>
+            <div class="entry submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+   </div> 
+   <script>
+        function submitForm(event) {
+            event.preventDefault();
+            let fname = document.getElementById('first-name').value;
+            let lname = document.getElementById('last-name').value;
+            let work_email = document.getElementById('work-email').value;
+            let comp_website = document.getElementById('company-website').value;
+            let country = document.getElementById('country').value;
+            let payment_volume = document.getElementById('payment-volume').value;
+            let anything_else = document.getElementById('anything-else').value; 
+
+            alert(`First name: ${fname}
+                   Last name: ${lname}
+                   Work email: ${work_email}
+                   Company website: ${comp_website}
+                   Country: ${country}
+                   Payment volume: ${payment_volume}
+                   Anything else: ${anything_else}`);
+        }
+   </script>
+</body>
+</html>

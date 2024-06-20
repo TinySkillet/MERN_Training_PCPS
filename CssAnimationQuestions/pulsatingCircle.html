@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .circle {
+            margin: auto;
+            height: 200px;
+            background: gray;
+            width: 200px;
+            border-radius: 50%;
+            margin-top: 5rem;
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(1);
+            }   
+
+            50% {    
+                transform: scale(.3);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .animate {
+            animation-duration: 5s;
+            animation-fill-mode: both;
+        }
+
+
+        .animate.pulsate {
+            animation-name: pulsate;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        
+    </style>
+    <title>Pulsating Circle</title>
+</head>
+<body>
+    <div class="circle animate pulsate">
+
+    </div>
+</body>
+</html>
