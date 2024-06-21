@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <style>
+      .progressbar {
+        background-color: aquamarine;
+        border: 5px solid rgb(187, 187, 240);
+        height: 100%;
+        border-radius: 2px;
+        width: 0; 
+        transition: width .3s ease-in-out;
+      }
+      .container {
+        background-color: aliceblue;
+        width: 90%;
+        height: 30px;
+        margin: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="progress-bar" class="progressbar"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let progressBar = document.getElementById("progress-bar");
+            let progressValue = 100; 
+
+            for (let i = 0; i <= progressValue; i++) {
+                setTimeout(() => {
+                    progressBar.style.width = `${i}%`;
+                }, i * 50); 
+            }
+        });
+    </script>
+</body>
+</html>
